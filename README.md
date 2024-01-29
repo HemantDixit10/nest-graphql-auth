@@ -158,56 +158,60 @@ example for signUp and login API (Username should be unique):
 
 ## SigUp API
 
-mutation signUp($input: CreateUserInput!) {
-signUp(createUserInput: $input) {
-id
-username
-firstname
-lastname
-}
-}
+    mutation signUp($input: CreateUserInput!) {
+    signUp(createUserInput: $input) {
+        id
+        username
+        firstname
+        lastname
+      }
+    }
 
 Query variables for signup:
-{
-"input": {
-"username": "test1",
-"password": "test123",
-"firstname":"test",
-"lastname":"test"
-}
-}
+
+    {
+        "input": {
+        "username": "test1",
+        "password": "test123",
+        "firstname":"test",
+        "lastname":"test"
+        }
+    }
 
 ## login API:
 
-mutation login($input: LoginUserInput!) {
-login(loginUserInput: $input) {
-user {
-username
-}
-access_token
-}
-}
+    mutation login($input: LoginUserInput!) {
+    login(loginUserInput: $input) {
+        user {
+        username
+    }
+        access_token
+    }
+        
+    }
 
 Query variable for login:
-{
-"input": {
-"username": "test1",
-"password": "test123"
-}
-}
+     
+    {
+    "input": {
+    "username": "test1",
+    "password": "test123"
+      }
+    }
 
 ## Get All User API:
 
-{
-users {
-username
-id
-firstname
-lastname
-}
-}
+        {
+        users {
+        username
+        id
+        firstname
+        lastname
+        }
+        }
 
 HTTP Headers for User
-{
-"Authorization": "Bearer <token whitch got you on login API response>"
-}
+
+        {
+        "Authorization": "Bearer <token whitch got you on login API response>"
+        }
