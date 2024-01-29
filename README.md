@@ -65,14 +65,14 @@ Folder structure :
 | "passport-jwt"             | "^4.0.1"       | jwt authentication                                                                        |
 | "passport-local"           | "^1.0.0"       | local authentication                                                                      |
 | "reflect-metadata"         | "^0.1.13"      | Reflect API includes methods for accessing and modifying metadata                         |
-| "type-graphql"             | "2.0.0-beta.1" | create GraphQL schema definitions from TypeScript classes                                 |
+| "type-graphql"             | "2.0.0-beta.1" | Create GraphQL schema definitions from TypeScript classes                                 |
 | "typeorm"                  | "^0.3.20       | ORM maps tables to model classes                                                          |
 
 </details>
 
 ## Pre-requisites
 
-For development, you will only need Node.js and a node global package, installed in your environement.
+For development, you will only need Node.js and a Node global package, installed in your environment.
 
 ### Node
 
@@ -83,7 +83,7 @@ For development, you will only need Node.js and a node global package, installed
 
 - #### Node installation on Ubuntu
 
-  You can install nodejs and npm easily with apt install, just run the following commands.
+  You can install node js and npm easily with apt install, just run the following commands.
 
       sudo apt install nodejs
       sudo apt install npm
@@ -150,7 +150,7 @@ $ pnpm run start:dev
 Currently there are none
 ```
 
-## Run graphQL on browser
+## Run graphQL on the browser
 
 http://localhost:3000/graphql
 
