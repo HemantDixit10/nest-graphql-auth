@@ -105,7 +105,7 @@ For development, you will only need Node.js and a Node global package, installed
 
 If you need to update `npm`, you can make it using `npm`! Cool right? After running the following command, just open again the command line and be happy.
 
-    npm install npm -g
+npm install npm -g
 
 ## Getting started
 
@@ -118,14 +118,14 @@ $ npm i -g @nestjs/cli
 ### Clone the repository
 
 ```
-git clone  https://github.com/medeloop/medeloop-features-api/branches
+git clone  https://github.com/HemantDixit10/nest-graphql-auth
 ```
 
 ### Install dependencies
 
 ```
 cd nest-graphql-auth
-pnpm install
+$ pnpm install
 ```
 
 ### Configure app
@@ -139,7 +139,9 @@ replace `env.example` to .env then edit it with your settings.
 ```
 # development
 $ pnpm run start
+```
 
+```
 # watch mode
 $ pnpm run start:dev
 ```
@@ -147,7 +149,14 @@ $ pnpm run start:dev
 ### Unit Tests
 
 ```
-Currently there are none
+#development
+$ pnpm run test
+```
+
+```
+# watch mode
+$ pnpm run test:watch
+
 ```
 
 ## Run graphQL on the browser
@@ -162,8 +171,8 @@ example for signUp and login API (Username should be unique):
     signUp(createUserInput: $input) {
         id
         username
-        firstname
-        lastname
+        first_name
+        last_name
       }
     }
 
@@ -171,47 +180,50 @@ Query variables for signup:
 
     {
         "input": {
-        "username": "test1",
-        "password": "test123",
-        "firstname":"test",
-        "lastname":"test"
+          "username": "test1",
+          "password": "test123",
+          "first_name":"test",
+          "last_name":"test"
         }
     }
 
-## login API:
+## login API
 
     mutation login($input: LoginUserInput!) {
     login(loginUserInput: $input) {
         user {
-        username
-    }
+          username
+        }
         access_token
-    }
-        
-    }
-
-Query variable for login:
-     
-    {
-    "input": {
-    "username": "test1",
-    "password": "test123"
       }
     }
 
-## Get All User API:
+Query variable for login:
 
-        {
-        users {
+    {
+      "input": {
+        "username": "test1",
+        "password": "test123"
+      }
+    }
+
+## Get All User API
+
+    {
+      users {
         username
         id
-        firstname
-        lastname
-        }
-        }
+        first_name
+        last_name
+      }
+    }
 
-HTTP Headers for User
+HTTP Headers for User:
 
-        {
-        "Authorization": "Bearer <token whitch got you on login API response>"
-        }
+    {
+      "Authorization": "Bearer <token whitch got you on login API response>"
+    }
+
+```
+
+```

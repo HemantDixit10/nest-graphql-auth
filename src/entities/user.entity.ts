@@ -14,11 +14,11 @@ export class User {
 
   @Field()
   @Column()
-  firstname: string;
+  first_name: string;
 
   @Field()
   @Column()
-  lastname: string;
+  last_name: string;
 
   @Field()
   @Column()

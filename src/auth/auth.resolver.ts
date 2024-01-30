@@ -5,7 +5,7 @@ import { LoginUserInput } from './dto/login-user.input';
 import { UseGuards } from '@nestjs/common';
 import { GqlAuthGuard } from '../guard/gql-auth.gaurd';
 import { User } from '../entities/user.entity';
-import { CreateUserInput } from 'src/users/dto/create-user.input';
+import { CreateUserInput } from '../users/dto/create-user.input';
 
 @Resolver()
 export class AuthResolver {
